@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+  box-sizing: border-box;
+  /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有标签内边框 */
+  outline: 0;
+}
+html {
+  font-size: 26.66667vw;
+}
+body {
+  height: 100vh;
+  font-size: .14rem;
+  background: #f7f7f7;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+.clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  display: flex;
+  height: .2rem;
+  text-align: center;
+  font-size: .12rem;
+  line-height: .2rem;
+}
+#header .place {
+  width: .5rem;
+  height: .2rem;
+  color: #d3079e;
+}
+#header h4 {
+  flex: 1;
+  height: .2rem;
+}
+#header .user {
+  display: flex;
+  width: .4rem;
+  height: .2rem;
+  justify-content: center;
+  align-items: center;
+  padding: .02rem 0 .02rem 0;
+}
+#header .user img {
+  height: 100%;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+}
+#main > .swiper-container {
+  height: 100%;
+}
+#main > .swiper-container > .swiper-wrapper > .swiper-slide {
+  height: auto;
+}
+#main #banner img {
+  width: 100%;
+}
+#main .travel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#main .travel a {
+  width: 32%;
+  margin-top: .05rem;
+}
+#main .travel a img {
+  width: 100%;
+}
+#main .nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .06rem 0 .1rem 0;
+}
+#main .nav a {
+  width: 25%;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+#main .nav a ~ a {
+  border-left: 1px solid #e6e6e6;
+}
+#main .nav a img {
+  width: 100%;
+}
+#main .recommend {
+  display: flex;
+  margin-bottom: .1rem;
+}
+#main .recommend a {
+  border-bottom: 1px solid #e6e6e6;
+}
+#main .recommend a img {
+  width: 100%;
+}
+#main .recommend > a {
+  flex: 1;
+}
+#main .recommend span {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-left: 1px solid #e6e6e6;
+}
+#main .hot {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .1rem;
+}
+#main .hot h4 {
+  font-size: .14rem;
+  padding: .07rem 0 .07rem .1rem;
+  color: #535757;
+  font-weight: normal;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #e6e6e6;
+}
+#main .hot a {
+  border-bottom: 1px solid #e6e6e6;
+}
+#main .hot a img {
+  width: 100%;
+}
+#main .Holiday {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .1rem;
+}
+#main .Holiday .title {
+  display: flex;
+  height: .32rem;
+  line-height: .32rem;
+  background-color: #f1f1f1;
+}
+#main .Holiday .title a {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+#main .Holiday .title a:first-child {
+  color: #d3079e;
+}
+#main .Holiday .title a:first-child::after {
+  position: absolute;
+  left: 50%;
+  bottom: .02rem;
+  width: .6rem;
+  height: .01rem;
+  background: #d3079e;
+  content: '';
+  transform: translateX(-50%);
+}
+#main .Holiday .content {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-bottom: .1rem;
+}
+#main .Holiday .content img {
+  width: 100%;
+}
+#main .Holiday .content h5 {
+  font-size: .14rem;
+  margin: .03rem 0 ;
+}
+#main .Holiday .content p {
+  font-size: .16rem;
+  margin-bottom: .04rem;
+}
+#main .Holiday .more {
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  background: #fff;
+}
+#footer {
+  display: flex;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  background: #d3079e;
+}
+#footer a {
+  color: #fff;
+}
+#footer .login {
+  width: .8rem;
+}
+#footer .resert {
+  width: .5rem;
+}
+#footer span {
+  flex: 1;
+}
+#footer .backTop {
+  width: .4rem;
+}

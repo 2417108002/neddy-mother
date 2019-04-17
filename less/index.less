@@ -1,0 +1,195 @@
+@import "base.less";
+body {
+    display: flex;
+    flex-direction: column;
+}
+#header {
+    display: flex;
+    height: .2rem;
+    text-align: center;
+    font-size: .12rem;
+    line-height: .2rem;
+    .place {
+        width: .5rem;
+        height: .2rem;
+        color: #d3079e;
+    }
+    h4 {
+        flex: 1;
+        height: .2rem;
+    }
+    .user {
+        display: flex;
+        width: .4rem;
+        height: .2rem;
+        justify-content: center;
+        align-items: center;
+        padding: .02rem 0 .02rem 0;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+#main {
+    flex: 1;
+    overflow: hidden;
+    >.swiper-container {
+        height: 100%;
+        >.swiper-wrapper {
+            >.swiper-slide {
+                height: auto;
+            }
+        }
+    }
+    #banner img {
+        width: 100%;
+    }
+    .travel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        a {
+            width: 32%;
+            margin-top: .05rem;
+            img {
+               width: 100%;
+            }
+        }
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding: .06rem 0 .1rem 0;
+        a {
+            width: 25%;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            &~a {
+                border-left: 1px solid #e6e6e6;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .recommend {
+        display: flex;
+        margin-bottom: .1rem;
+        a {
+            border-bottom: 1px solid #e6e6e6;
+            img {
+                width: 100%;
+            }
+        }
+        > a {
+            flex: 1;
+        }
+        span {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            border-left: 1px solid #e6e6e6;
+            
+        }
+    }
+
+    .hot {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .1rem;
+        h4 {
+            font-size: .14rem;
+            padding: .07rem 0 .07rem .1rem;
+            color: #535757;
+            font-weight: normal;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        a {
+            border-bottom: 1px solid #e6e6e6;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .Holiday {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .1rem;
+        .title {
+            display: flex;
+            height: .32rem;
+            line-height: .32rem;
+            background-color: #f1f1f1;
+            a {
+                position: relative;
+                flex: 1;
+                text-align: center;
+                &:first-child {
+                    color: #d3079e;
+                    &::after {
+                        position: absolute;
+                        left: 50%;
+                        bottom: .02rem;
+                        width: .6rem;
+                        height: .01rem;
+                        background: #d3079e;
+                        content: '';
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            margin-bottom: .1rem;
+            img {
+                width: 100%;
+            }
+            h5 {
+                font-size: .14rem;
+                margin: .03rem 0 ;
+            }
+            p {
+                font-size: .16rem;
+                margin-bottom: .04rem;
+            }
+        }
+        .more {
+            height: .3rem;
+            line-height: .3rem;
+            text-align: center;
+            background: #fff;
+        }
+    }
+
+
+}
+
+#footer {
+    display: flex;
+    height: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    background: #d3079e;
+    a {
+        color: #fff;
+    }
+    .login {
+        width: .8rem;
+    }
+    .resert {
+        width: .5rem;
+    }
+    span {
+        flex: 1;
+    }
+    .backTop {
+        width: .4rem;
+    }
+}
